@@ -1,0 +1,27 @@
+{
+  "name": "@red-unica/libreria-cifrado",
+  "version": "1.0.0",
+  "description": "Libreria para cifrar y decifrar informacion de red unica",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "microbundle --no-compress",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "brramirez",
+  "license": "ISC",
+  "dependencies": {
+    "aes256": "^1.0.4",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "microbundle": "^0.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brramirez/lib-cifrado.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brramirez/lib-cifrado/issues"
+  },
+  "homepage": "https://github.com/brramirez/lib-cifrado#readme"
+}
