@@ -21,10 +21,19 @@ npm install @red-unica/libreria-cifrado
 
 ## Uso
 
-Cree un archivo .env en el directorio raíz de su proyecto. Agregue la siguiente variable:
+Cree un archivo .env en el directorio raíz de su proyecto.
+
+Para aplicación REACT use:
 ```
 
-RED_UNICA_FRASE_SECRETA = "FRASE_SECRETA"
+REACT_APP_JUEZ_FRASE_SECRETA = "FRASE_SECRETA"
+
+``` 
+
+Para aplicación EXPRESS use:
+```
+
+EXPRESS_APP_JUEZ_FRASE_SECRETA = "FRASE_SECRETA"
 
 ``` 
 

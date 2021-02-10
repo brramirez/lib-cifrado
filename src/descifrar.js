@@ -6,13 +6,18 @@ var aes256 = require('aes256');
 * @returns texto descifrado
 */
 const descifrarTexto = (textoCifrado) => {
-    try {
-        const textoDescifrado = aes256.decrypt(process.env.RED_UNICA_FRASE_SECRETA, textoCifrado);
-        return textoDescifrado;
-    } catch (error) {
-        console.error(error);
+
+    var textoDescifrado;
+
+    if (process.env.REACT_APP_JUEZ_FRASE_SECRETA) {
+        textoDescifrado = aes256.decrypt(process.env.REACT_APP_JUEZ_FRASE_SECRETA, textoCifrado);
+    } else if (process.env.EXPRESS_APP_JUEZ_FRASE_SECRETA) {
+        textoDescifrado = aes256.decrypt(process.env.EXPRESS_APP_JUEZ_FRASE_SECRETA, textoCifrado);
+    } else {
+        throw new Error('No se encontró FRASE_SECRETA válida');
     }
 
+    return textoCifrado;
 }
 
 export default descifrarTexto;

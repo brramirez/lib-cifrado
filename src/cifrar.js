@@ -6,12 +6,18 @@ var aes256 = require('aes256');
 * @returns texto cifrado
 */
 const cifrarTexto = (textoPlano) => {
-    try {
-        const textoPlanoCifrado = aes256.encrypt(process.env.RED_UNICA_FRASE_SECRETA, textoPlano);
-        return textoPlanoCifrado;
-    } catch (error) {
-        console.error(error);
+
+    var textoPlanoCifrado;
+
+    if (process.env.REACT_APP_JUEZ_FRASE_SECRETA) {
+        textoPlanoCifrado = aes256.encrypt(process.env.REACT_APP_JUEZ_FRASE_SECRETA, textoPlano);
+    } else if (process.env.EXPRESS_APP_JUEZ_FRASE_SECRETA) {
+        textoPlanoCifrado = aes256.encrypt(process.env.EXPRESS_APP_JUEZ_FRASE_SECRETA, textoPlano);
+    } else {
+        throw new Error('No se encontró FRASE_SECRETA válida');
     }
+
+    return textoPlanoCifrado;
 }
 
 export default cifrarTexto;
