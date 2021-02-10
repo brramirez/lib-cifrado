@@ -7,7 +7,7 @@ var aes256 = require('aes256');
 */
 const descifrarTexto = (textoCifrado) => {
 
-    var textoDescifrado;
+    let textoDescifrado;
 
     if (process.env.REACT_APP_JUEZ_FRASE_SECRETA) {
         textoDescifrado = aes256.decrypt(process.env.REACT_APP_JUEZ_FRASE_SECRETA, textoCifrado);
@@ -17,7 +17,7 @@ const descifrarTexto = (textoCifrado) => {
         throw new Error('No se encontró FRASE_SECRETA válida');
     }
 
-    return textoCifrado;
+    return textoDescifrado;
 }
 
 export default descifrarTexto;

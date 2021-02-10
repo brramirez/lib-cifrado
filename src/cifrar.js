@@ -7,7 +7,7 @@ var aes256 = require('aes256');
 */
 const cifrarTexto = (textoPlano) => {
 
-    var textoPlanoCifrado;
+    let textoPlanoCifrado;
 
     if (process.env.REACT_APP_JUEZ_FRASE_SECRETA) {
         textoPlanoCifrado = aes256.encrypt(process.env.REACT_APP_JUEZ_FRASE_SECRETA, textoPlano);

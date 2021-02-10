@@ -1,13 +1,13 @@
 {
   "name": "@red-unica/libreria-cifrado",
-  "version": "1.0.6",
-  "description": "Libreria para cifrar y decifrar informacion de red unica",
+  "version": "1.0.8",
+  "description": "Librería para cifrar y decifrar información de red única",
   "source": "index.js",
   "main": "dist/index.js",
   "module": "dist/index.module.js",
   "exports": "./dist/index.modern.js",
   "scripts": {
-    "build": "microbundle --no-sourcemap",
+    "build": "microbundle --no-compress",
     "prepare": "run-s build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
