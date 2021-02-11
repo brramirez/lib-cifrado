@@ -1,6 +1,6 @@
 {
   "name": "@red-unica/libreria-cifrado",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Librería para cifrar y decifrar información de red única",
   "main": "index.js",
   "scripts": {
