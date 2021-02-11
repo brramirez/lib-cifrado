@@ -20,4 +20,5 @@ const descifrarTexto = (textoCifrado) => {
     return textoDescifrado;
 }
 
-export default descifrarTexto;
+//export default descifrarTexto;
+module.exports = descifrarTexto;

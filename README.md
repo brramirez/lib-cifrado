@@ -41,7 +41,7 @@ Importe las funciones necesarias para su proyecto:
 
 ```javascript
 
-import { cifrarTexto, descifrarTexto } from '@red-unica/libreria-cifrado'  
+const { cifrarTexto, descifrarTexto } = require('@red-unica/libreria-cifrado')
 
 const textoCifrado = cifrarTexto(textoPlano); # retorna la cadena de texto cifrada  
 
