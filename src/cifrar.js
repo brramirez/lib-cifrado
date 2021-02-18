@@ -20,5 +20,4 @@ const cifrarTexto = (textoPlano) => {
     return textoPlanoCifrado;
 }
 
-//export default cifrarTexto;
 module.exports = cifrarTexto;
